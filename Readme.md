@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Николай Морякин](https://up.htmlacademy.ru/htmlcss/20/user/541999).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович](https://htmlacademy.ru/profile/balabanovich).
 
 ---
 
