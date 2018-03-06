@@ -1,19 +1,31 @@
 body {
-	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 21px;
+	font-family: "PT Sans", "Arial", sans-serif;
 	color: #333333;
+	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	white-space: pre-wrap;
+}
+.message-info > p {
+	line-height: 26px;
+}
+h1, h2, h3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	color: #000000;
 }
 
-h1, h2 {
-	font-style: bold;
-	font-weight: 700;
-	font-size: 2.143em;
-	color: #000000;
-	line-height: 1.2;
+h3 {
+	font-size: 21px;
+	line-height: 21px;
+}
+
+.greetings {
+	font-size: 21px;
+	line-height: 26px;
 }
