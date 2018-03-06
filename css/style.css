@@ -1,0 +1,19 @@
+body {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #333333;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: pre-wrap;
+}
+
+h1, h2 {
+	font-style: bold;
+	font-weight: 700;
+	font-size: 2.143em;
+	color: #000000;
+	line-height: 1.2;
+}
