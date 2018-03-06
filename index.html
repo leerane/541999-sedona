@@ -22,24 +22,24 @@
 	<main class="main-container">
 		<h1 class="visually-hidden">Седона - поиск жилья!</h1>
 		<div class="promo-container"> <!-- Горы - в CSS -->
-			<img src="img/welcome.svg"> <!-- Добавил как <img> -->
+			<img src="img/promo-img.png" width="458" height="352"> <!-- Добавил как <img> -->
 		</div> <!-- Зубцы - псевдоклассом в CSS -->
-		<p class="message-info">
-			<b class="greetings">
+		<div class="message-info">
+			<h2 class="greetings">
 				Седона - небольшой городок в Аризоне, <br>
 				заслуживающий большего!
-			</b>
-			Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
-		</p>
+			</h2>
+			<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+		</div>
 		<section class="features">
 			<h2 class="visually-hidden">Преимущества Седоны</h2>
 			<div class="features-item">
 				<div class="features-img"></div> <!-- Изображение как фон -->
-				<p class="features-text">
+				<div class="features-text">
 					<h3>Настоящий городок</h3>
 					<span class="features-number">1</span>
-					Седона - не аттракцион для туристов, там течет своя жизнь
-				</p>
+					<p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+				</div>
 			</div>
 			<ul class="advices-list">
 				<li class="advice-item">
@@ -57,11 +57,11 @@
 			</ul>
 			<div class="features-item features-item-right">
 				<div class="features-img"></div> <!-- Изображение как фон -->
-				<p class="features-text">
+				<div class="features-text">
 					<h3>Там есть мост дьявола</h3>
 					<span class="features-number">2</span>
-					Да, по нему можно пройти! Если, конечно, Вы осмелитесь
-				</p>
+					<p>Да, по нему можно пройти! Если, конечно, Вы осмелитесь</p>
+				</div>
 			</div>
 			<ul class="features-list">
 				<li class="features-list-item">
@@ -81,47 +81,45 @@
 				</li>
 			</ul>
 		</section>
-		<p class="message-info">
-			<b class="interesting"> <!-- Что за бред? -->
-				Укажите предполагаемые даты поездки, <br>
-				и мы покажем Вам лучшие предложения гостиниц в Седоне
-			</b>
-			Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
-			<button type="button" class="button button-secondary button-large">
+		<div class="message-info">
+			<h2 class="interesting">
+				Заинтересовались?
+			</h2>
+			<p>Укажите предполагаемые даты поездки и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+			<a href="catalog.html" target="_blank" class="button button-secondary button-large">
 				Поиск гостиницы в Седоне
-			</button> <!-- Я так и не понял, эти ли выпадает модалка -->
-		</p>
+			</a> 
+			<div class="modal-search">
+				<!-- Форма -->
+			</div>
+		</div>
 		<div class="sedoma-map">
-			<!-- Гугл-карта? -->
+			<img src="img/map.jpg" width="1280" height="747" alt="Наши координаты"> <!-- Если не прогрузилось -->
+			<!-- Карта -->
 		</div>
 	</main>
 	<footer class="main-footer">
-		<!-- Почему футер с прозрачностью налегает на карту? -->
 		<p class="footer-contacts">
 			<b class="footer-hashtag">#visitsedona</b>
 		</p>
 		<div class="footer-social">
 			<ul>
 				<li>
-					<a href="#" class="social-button">Twitter</a>
+					<a href="#" class="social-button social-button-twitter">Twitter</a>
 				</li>
 				<li>
-					<a href="#" class="social-button">Facebook</a>
+					<a href="#" class="social-button social-button-facebook">Facebook</a>
 				</li>
 				<li>
-					<a href="#" class="social-button">Youtube</a>
+					<a href="#" class="social-button social-button-youtube">Youtube</a>
 				</li>
 			</ul>
 		</div>
 		<p class="footer-copyright">
 			Website by:
-			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy-logo.svg"></a>
+			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_name.svg" width="115" height="41" alt="HTML Academy"></a>
 		</p>
 	</footer>
-	<section class="modal modal-search">
-		<h2 class="visually-hidden">Поиск гостиницы</h2>
-		<!-- Здесь будет форма -->
-	</section>
 	</div>
 </body>
 </html>
