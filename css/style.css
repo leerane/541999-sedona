@@ -5,7 +5,6 @@ body {
 	line-height: 21px;
 	font-family: "PT Sans", "Arial", sans-serif;
 	color: #333333;
-	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -32,4 +31,24 @@ h3 {
 
 .booking-count-group {
 	display: inline-block;
+}
+
+.filter-checkbox, input {
+	cursor: pointer;
+}
+.site-navigation li: {
+	text-align: right;
+}
+.site-navigation li:not(:nth-of-type(3)):not(:nth-of-type(4)){
+	text-align: left;
+}
+
+.site-navigation li {
+	background-color: rgba(255,0,0,0.1);
+}
+
+.filter-output {
+	width: 200px;
+	border: 2px solid red;
+	border-radius: 10px;
 }
