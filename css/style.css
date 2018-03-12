@@ -29,3 +29,7 @@ h3 {
 	font-size: 21px;
 	line-height: 26px;
 }
+
+.booking-count-group {
+	display: inline-block;
+}
