@@ -11,13 +11,13 @@
 		<header class="main-header">
 			<nav class="main-navigation">
 				<a class="main-header-logo"> <!-- Убрал из меню, так как он не является пунктом -->
-					<img src="img/logo.svg" alt="Седона">
+					<img src="img/main-logo.png" width="130" height="70" alt="Седона">
 				</a>
 				<ul class="site-navigation">
-					<li>Информация</li>
-					<li>Фото и видео</li>
-					<li>Карта штата</li>
-					<li>Гостиницы</li>
+					<li><a href="information.html">Информация</a></li>
+					<li><a href="media.html">Фото и видео</a></li>
+					<li><a href="map.html">Карта штата</a></li>
+					<li><a href="hotels.html">Гостиницы</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -90,7 +90,38 @@
 					Поиск гостиницы в Седоне
 				</a> 
 				<div class="modal-search">
-					<!-- Форма -->
+					<form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+						<div class="booking-item">
+							<label for="booking-arrival-date">Дата заезда:</label>
+							<input type="text" name="arrival-date" id="booking-arrival-date" class="booking-input">
+							<button type="button" class="button-form button-form-arrival-calendar" aria-label="Дата заезда"></button>
+						</div>
+						<div class="booking-item">
+							<label for="booking-arrival-date">Дата выезда:</label>
+							<input type="text" name="departure-date" id="booking-departure-date" class="booking-input">
+							<button type="button" class="button-form button-form-departure-calendar" aria-label="Дата выезда"></button>
+						</div>
+						<div class="booking-item booking-item-small">
+							<label for="booking-adults-amount">Взрослые:</label>
+							<div class="booking-count-group">
+								<button type="button" class="button-form button-form-adults-dec" aria-label="Уменьшить"></button>
+								<input type="text" name="adults-amount" id="booking-adults-amount" class="booking-input bookint-input-count">
+								<button type="button" class="button-form button-form-adults-inc" aria-label="Увеличить"></button>
+							</div>
+							<div class="booking-count-group">
+						</div>
+						<div class="booking-item booking-item-small">
+							<label for="booking-children-amount">Дети:</label>
+							<div class="booking-count-group">
+								<button type="button" class="button-form button-form-children-dec" aria-label="Уменьшить"></button>
+								<input type="text" name="children-amount" id="booking-children-amount" class="booking-input bookint-input-count">
+								<button type="button" class="button-form button-form-children-inc" aria-label="Увеличить"></button>
+							</div>
+						</div>
+						<button type="submit" class="button button-primary button-modal-search">
+							Поиск гостиницы в Седоне
+						</button> 
+					</form>
 				</div>
 			</div>
 			<div class="sedoma-map">
@@ -117,7 +148,9 @@
 			</div>
 			<p class="footer-copyright">
 				Website by:
-				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_name.svg" width="115" height="41" alt="HTML Academy"></a>
+				<a href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/logo_name.svg" width="115" height="41" alt="HTML Academy">
+				</a>
 			</p>
 		</footer>
 	</div>
