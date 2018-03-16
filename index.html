@@ -11,7 +11,7 @@
 		<header class="main-header">
 			<nav class="main-navigation">
 				<a class="main-header-logo"> <!-- Убрал из меню, так как он не является пунктом -->
-					<img src="img/main-logo.png" width="130" height="70" alt="Седона">
+					<img src="img/main-logo.png" width="138" height="70" alt="Седона">
 				</a>
 				<ul class="site-navigation">
 					<li><a href="information.html">Информация</a></li>
@@ -27,7 +27,7 @@
 				<img src="img/promo-img.png" width="458" height="352"> <!-- Добавил как <img> -->
 			</div> <!-- Зубцы - псевдоклассом в CSS -->
 			<div class="message-info">
-				<h2 class="greetings">Седона - небольшой городок в Аризоне, <br>заслуживающий большего!
+				<h2 class="greetings">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!
 				</h2>
 				<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 			</div>
@@ -36,9 +36,9 @@
 				<div class="features-item">
 					<div class="features-img"></div> <!-- Изображение как фон -->
 					<div class="features-text">
-						<h3>Настоящий городок</h3>
-						<span class="features-number">1</span>
-						<p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+						<h3>Настоящий<br>городок</h3>
+						<span class="features-number">№1</span>
+						<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
 					</div>
 				</div>
 				<ul class="advices-list">
@@ -58,37 +58,33 @@
 				<div class="features-item features-item-right">
 					<div class="features-img"></div> <!-- Изображение как фон -->
 					<div class="features-text">
-						<h3>Там есть мост дьявола</h3>
-						<span class="features-number">2</span>
-						<p>Да, по нему можно пройти! Если, конечно, Вы осмелитесь</p>
+						<h3>Там есть<br>мост дьявола</h3>
+						<span class="features-number">№2</span>
+						<p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
 					</div>
 				</div>
 				<ul class="features-list">
 					<li class="features-list-item">
-						<h3>Небольшая площадь</h3>
-						<span class="features-number">3</span>
+						<h3>Небольшая<br>площадь</h3>
+						<span class="features-number">№3</span>
 						<p>Все достопримечательности находятся очень близко</p>
 					</li>
 					<li class="features-list-item">
-						<h3>Красивая дорога</h3>
-						<span class="features-number">4</span>
+						<h3>Красивая<br>дорога</h3>
+						<span class="features-number">№4</span>
 						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 					</li>
 					<li class="features-list-item">
-						<h3>Мало туристов</h3>
-						<span class="features-number">5</span>
+						<h3>Мало<br>туристов</h3>
+						<span class="features-number">№5</span>
 						<p>Большинство едет в Гранд Каньон и толпится там</p>
 					</li>
 				</ul>
 			</section>
-			<div class="message-info">
-				<h2 class="interesting">
-					Заинтересовались?
-				</h2>
-				<p>Укажите предполагаемые даты поездки и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-				<a href="catalog.html" target="_blank" class="button button-secondary button-large">
-					Поиск гостиницы в Седоне
-				</a> 
+			<div class="message-attraction">
+				<h2 class="attraction">Заинтересовались?</h2>
+				<p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+				<a href="catalog.html" target="_blank" class="button button-secondary button-large">Поиск гостиницы в Седоне</a> 
 				<div class="modal-search">
 					<form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
 						<div class="booking-item">
@@ -108,7 +104,6 @@
 								<input type="text" name="adults-amount" id="booking-adults-amount" class="booking-input bookint-input-count">
 								<button type="button" class="button-form button-form-adults-inc" aria-label="Увеличить"></button>
 							</div>
-							<div class="booking-count-group">
 						</div>
 						<div class="booking-item booking-item-small">
 							<label for="booking-children-amount">Дети:</label>
@@ -118,41 +113,60 @@
 								<button type="button" class="button-form button-form-children-inc" aria-label="Увеличить"></button>
 							</div>
 						</div>
-						<button type="submit" class="button button-primary button-modal-search">
-							Поиск гостиницы в Седоне
-						</button> 
+						<button type="submit" class="button button-primary button-modal-search">Найти</button> 
 					</form>
 				</div>
 			</div>
-			<div class="sedoma-map">
-				<img src="img/map.jpg" width="1280" height="747" alt="Наши координаты"> <!-- Если не прогрузилось -->
-				<!-- Карта -->
-			</div>
 		</main>
 		<footer class="main-footer">
-			<p class="footer-contacts">
-				<b class="footer-hashtag">#visitsedona</b>
-			</p>
-			<div class="footer-social">
-				<ul>
-					<li>
-						<a href="#" class="social-button social-button-twitter">Twitter</a>
-					</li>
-					<li>
-						<a href="#" class="social-button social-button-facebook">Facebook</a>
-					</li>
-					<li>
-						<a href="#" class="social-button social-button-youtube">Youtube</a>
-					</li>
-				</ul>
+			<div class="sedona-map">
+				<iframe class="sedona-map-frame" frameborder="0"
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDq49LAadFL5mh-lWSk3s0V8-44Y9GYd7c&q=Sedona&zoom=9&center=34.869627,-111.761154&maptype=roadmap" allowfullscreen>
+				</iframe>
+				<div class="footer-wrap">
+					<p class="footer-contacts">
+						<b class="footer-hashtag">#visitsedona</b>
+					</p>
+					<div class="footer-social">
+						<ul>
+							<li>
+								<a href="#" class="social-button social-button-twitter" aria-label="Twitter">
+									<svg aria-hidden="true" width="17" height="15">
+										<use xlink:href="sprites.svg#twitter" class="twitter-1"/>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="social-button social-button-facebook" aria-label="Facebook">
+									<svg aria-hidden="true" width="12" height="22">
+										<use xlink:href="sprites.svg#facebook" class="facebook-1"/>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="social-button social-button-youtube" aria-label="Youtube">
+									<svg aria-hidden="true" width="20" height="16">
+										<use xlink:href="https://leerane.github.io/sprites.svg#youtube" class="youtube-1"/>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<p class="footer-copyright">
+						<span>Website by:</span>
+						<a href="https://htmlacademy.ru/intensive/htmlcss">
+							<img src="img/logo_name.svg" width="115" height="41" alt="HTML Academy">
+						</a>
+					</p>
+				</div>
 			</div>
-			<p class="footer-copyright">
-				Website by:
-				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="img/logo_name.svg" width="115" height="41" alt="HTML Academy">
-				</a>
-			</p>
 		</footer>
 	</div>
+		<script>
+			document.write('<script src="http://' + 
+				(location.host || 'localhost').split(':')[0] + 
+				':35729/livereload.js?snipver=1"></' + 'script>')
+		</script>
+		<script type="text/javascript" src="https://leerane.github.io/sprites.js"></script>
 </body>
 </html>
