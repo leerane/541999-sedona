@@ -534,6 +534,15 @@ a {
 	color: #000000;
 }
 
+.hotel-name a:hover {
+	color: #81b3d2;
+}
+
+.hotel-name a:active {
+	color: #000000;
+	opacity: 0.3;
+}
+
 .hotel-category {
 	margin-bottom: 12px;
 	display: flex;
