@@ -945,6 +945,13 @@ a {
 	opacity: 0.9;
 }
 
+.social-button-twitter {
+	background-image: url("../img/twitter-icon.svg");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
 .social-button svg,
 .htmlacademy-logo svg,
 .booking-item svg,
