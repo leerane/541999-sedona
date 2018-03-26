@@ -215,6 +215,8 @@ input[type="radio"].visually-hidden {
   min-height: 217px;
   margin: 0 auto;
   padding: 0 6%;
+  padding-top: 22px;
+  padding-bottom: 30px;
 	
 	background-color: #7aa1c3;
   background-image: url("../img/filter-img.jpg");
@@ -228,8 +230,6 @@ input[type="radio"].visually-hidden {
 
   margin: 0 auto;
   padding: 0;
-  padding-top: 22px;
-  padding-bottom: 31px;
 
   align-items: flex-start;
   justify-content: space-between;
@@ -247,6 +247,7 @@ input[type="radio"].visually-hidden {
 
   align-items: flex-start;
   flex-basis: 50%;
+  flex-grow: 1;
 }
 
 .filter-item-left:nth-child(2) {
@@ -260,7 +261,7 @@ input[type="radio"].visually-hidden {
   max-width: 318px;
 
   align-items: center;
-  flex-basis: 33%;
+  flex-basis: 50%;
   justify-content: center;
 }
 
@@ -274,8 +275,9 @@ input[type="radio"].visually-hidden {
 
 .filter-item {
   position: relative;
-
+	margin: 0;
   padding: 3px 0;
+  margin-bottom: 11px;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -283,32 +285,26 @@ input[type="radio"].visually-hidden {
 
 .filter-item::after {
   position: absolute;
-  top: 5px;
+  top: 50%;
   left: 50%;
 
   width: 2px;
   height: 22px;
+  transform: translate(-50%, -50%);
 
   content: "";
 
   background-image: url("../img/separator.svg");
 }
 
-.filter-output span {
+.filter-output label {
   font-size: 14px;
   line-height: 21px;
 
   color: #ffffff;
 }
 
-.filter-output-from span {
-  margin-right: 4px;
-  margin-left: 19px;
-}
 
-.filter-output-to span {
-  margin-right: 4px;
-}
 
 .filter-output {
   display: flex;
@@ -316,9 +312,9 @@ input[type="radio"].visually-hidden {
 
 .filter-output-from,
 .filter-output-to {
-  display: inline-block;
-
   margin: 0 auto;
+  flex-basis: 50%;
+  text-align: center;
 }
 
 .filter-output input[type="text"] {
@@ -345,8 +341,9 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 24px;
   padding: 0;
-  padding-top: 1px;
+  padding-top: 2px;
   padding-left: 0;
+  padding-right: 0;
 
   color: #ffffff;
 }
@@ -360,7 +357,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-form-right legend {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   margin-left: 2px;
 }
 
@@ -396,14 +393,14 @@ input[type="radio"].visually-hidden {
 
   margin: 0;
   padding: 0;
-  padding-left: 40px;
+  padding-left: 39px;
 
   cursor: pointer;
 }
 
 .filter-checkbox::before {
   position: absolute;
-  top: -1px;
+  top: -2px;
   bottom: 0;
   left: 0;
 
@@ -417,11 +414,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input-checkbox:checked ~ .filter-checkbox::before {
-  position: absolute;
-  top: -1px;
-  bottom: 0;
-  left: 0;
-
   width: 27px;
   height: 23px;
 
@@ -441,11 +433,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input-checkbox[disabled][checked] ~ .filter-checkbox::before {
-  position: absolute;
-  top: -1px;
-  bottom: 0;
-  left: 0;
-
   width: 27px;
   height: 23px;
 
@@ -456,11 +443,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input-checkbox[disabled] ~ .filter-checkbox::before {
-  position: absolute;
-  top: -1px;
-  bottom: 0;
-  left: 0;
-
   width: 27px;
   height: 23px;
 
@@ -473,16 +455,15 @@ input[type="radio"].visually-hidden {
 .filter-range-slider {
   position: relative;
 
-  margin-top: 11px;
   padding-top: 9px;
   padding-bottom: 32px;
 }
 
 .filter-range {
-  width: 99%;
   height: 2px;
   margin: 0 auto;
   padding: 0;
+  width: 99%;
 
   border-radius: 100px;
   background-color: rgba(255,255,255,0.3);;
@@ -490,11 +471,9 @@ input[type="radio"].visually-hidden {
 
 .filter-track {
   height: 2px;
-  margin: 0 auto;
-  margin-right: 20%;
   padding: 0;
+  width: 80%;
 
-  opacity: 1;
   border-radius: 100px;
   background-color: #ffffff;
 }
@@ -1425,8 +1404,7 @@ svg path {
 .button-range {
   position: absolute;
   top: 0;
-
-  display: inline-block;
+	left: 1px;
 
   width: 20px;
   height: 22px;
@@ -1453,7 +1431,7 @@ svg path {
 }
 
 .button-range-to {
-  left: 79.4%;
+  left: 80%;
 }
 
 .button-range-to:hover,
@@ -1475,8 +1453,8 @@ svg path {
   display: block;
 
   margin: 0;
-  margin-right: 8px;
-  padding: 7px 34px;
+  margin-right: 11px;
+  padding: 7px 34px 7px 34px;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
