@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>HTML Academy: Седона</title>
 </head>
-<body>
+<body class="inner-page">
 	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 		<symbol id="twitter" viewBox="0 0 17 15">
 			<path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
@@ -77,16 +77,16 @@
 								<legend>Инфраструктура:</legend>
 								<ul class="filter-list">
 									<li class="filter-option">
-										<input type="checkbox" name="pool" id="filter-pool" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-pool" tabindex="0">Бассейн</label>
+										<input type="checkbox" name="pool" id="filter-pool" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-pool">Бассейн</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="pool" id="filter-parking" class="filter-input-checkbox" disabled>
-										<label class="filter-checkbox" for="filter-parking" tabindex="0">Парковка</label>
+										<input type="checkbox" name="parking" id="filter-parking" class="filter-input-checkbox visually-hidden" disabled>
+										<label class="filter-checkbox" for="filter-parking">Парковка</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="pool" id="filter-wifi" class="filter-input-checkbox" disabled checked>
-										<label class="filter-checkbox" for="filter-wifi" tabindex="0">Wi-Fi</label>
+										<input type="checkbox" name="wifi" id="filter-wifi" class="filter-input-checkbox visually-hidden" disabled checked>
+										<label class="filter-checkbox" for="filter-wifi">Wi-Fi</label>
 									</li>
 								</ul>
 							</fieldset>
@@ -94,16 +94,16 @@
 								<legend>Тип жилья:</legend>
 								<ul class="filter-list">
 									<li class="filter-option">
-										<input type="checkbox" name="hotel" id="filter-hotel" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-hotel" tabindex="0">Гостиница</label>
+										<input type="checkbox" name="hotel" id="filter-hotel" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-hotel">Гостиница</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="motel" id="filter-motel" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-motel" tabindex="0">Мотель</label>
+										<input type="checkbox" name="motel" id="filter-motel" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-motel">Мотель</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="apartments" id="filter-apartments" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-apartments" tabindex="0">Апартаменты</label>
+										<input type="checkbox" name="apartments" id="filter-apartments" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-apartments">Апартаменты</label>
 									</li>
 								</ul>
 							</fieldset>
@@ -266,31 +266,36 @@
 			</section>
 		</main>
 		<footer class="main-footer">
-			<div class="footer-wrap footer-wrap-catalog">
-				<p class="footer-contacts">
-					#visitsedona
-				</p>
-				<div class="footer-social">
-					<ul>
-						<li>
-							<a href="#" class="social-button social-button-twitter" aria-label="Twitter">Twitter</a>
-						</li>
-						<li>
-							<a href="#" class="social-button social-button-facebook" aria-label="Facebook">
-								<svg aria-hidden="true" width="12" height="22">
-									<use xlink:href="#facebook" class="facebook-1"/>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="social-button social-button-youtube" aria-label="Youtube">
-								<svg aria-hidden="true" width="20" height="16">
-									<use xlink:href="#youtube" class="youtube-1"/>
-								</svg>
-							</a>
-						</li>
-					</ul>
+			<div class="footer-wrap">
+				<div class="footer-contacts">
+					<p>#visitsedona</p>
 				</div>
+				<ul class="footer-social">
+					<li>
+						<a href="#" class="social-button social-button-twitter" aria-label="Twitter">
+							<span class="visually-hidden">Twitter</span>
+							<svg aria-hidden="true" width="17" height="15">
+								<use xlink:href="#twitter" class="twitter-1"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="social-button social-button-facebook" aria-label="Facebook">
+							<span class="visually-hidden">Facebook</span>
+							<svg aria-hidden="true" width="12" height="22">
+								<use xlink:href="#facebook" class="facebook-1"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="social-button social-button-youtube" aria-label="Youtube">
+							<span class="visually-hidden">Youtube</span>
+							<svg aria-hidden="true" width="20" height="16">
+								<use xlink:href="#youtube" class="youtube-1"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
 				<p class="footer-copyright">
 					<span>Website by</span>
 					<a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="HTMLAcademy">
