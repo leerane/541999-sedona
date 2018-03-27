@@ -233,48 +233,43 @@ input[type="radio"].visually-hidden {
 
   align-items: flex-start;
   justify-content: space-between;
-}
-
-.filter-form fieldset {
-  margin: 0;
-  padding: 0;
-
-  border: 0;
+  flex-wrap: wrap;
 }
 
 .filter-form-left {
   display: flex;
 
   align-items: flex-start;
-  flex-basis: 50%;
-  flex-grow: 1;
+  flex-basis: 66%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.filter-item-left:nth-child(2) {
-  margin-left: 22.1%;
+.filter-item-left:not(:last-child) {
+  margin-right: 0;
 }
 
 .filter-form-right {
   display: flex;
   flex-direction: column;
 
+  flex-basis: 33%;
   max-width: 318px;
 
   align-items: center;
-  flex-basis: 50%;
   justify-content: center;
+  padding-top: 2px;
 }
 
-.filter-form-right fieldset {
+.filter-form-right .filter-right-wrapper {
   width: 100%;
   margin: 0;
   padding: 0;
-
-  border: 0;
 }
 
 .filter-item {
   position: relative;
+  width: 100%;
 	margin: 0;
   padding: 3px 0;
   margin-bottom: 11px;
@@ -312,7 +307,7 @@ input[type="radio"].visually-hidden {
 
 .filter-output-from,
 .filter-output-to {
-  margin: 0 auto;
+  
   flex-basis: 50%;
   text-align: center;
 }
@@ -334,18 +329,32 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
+.filter-output-from {
+	padding-left: 25px;
+}
+
+.filter-output-to {
+	padding-left: 5px;
+}
+
 [class="filter-form"] legend {
   font-size: 16px;
   font-weight: 700;
 
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   padding: 0;
   padding-top: 2px;
-  padding-left: 0;
-  padding-right: 0;
 
   color: #ffffff;
+}
+
+.filter-item-left {
+	max-width: 140px;
+	margin: 0;
+  padding: 0;
+
+  border: 0;
 }
 
 .filter-item-left:first-child legend {
@@ -353,12 +362,20 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-item-left:last-child legend {
-  margin-left: -2px;
+  margin-left: -3px;
 }
 
-.filter-form-right legend {
+.filter-item-left:not(:last-child) {
+  margin-right: 16.9%;
+}
+
+.filter-form-right .price-label {
+	display: block;
+	font-size: 16px;
+  font-weight: 700;
   margin-bottom: 8px;
   margin-left: 2px;
+  color: #ffffff;
 }
 
 .filter-list {
@@ -373,13 +390,13 @@ input[type="radio"].visually-hidden {
 .filter-option {
   line-height: 21px;
 
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   user-select: none;
 }
 
-.filter-option:nth-child(2) {
-  margin-bottom: 26px;
+.filter-option:nth-child(2n) {
+  margin-bottom: 25px;
 }
 
 .filter-option:last-child {
@@ -400,8 +417,7 @@ input[type="radio"].visually-hidden {
 
 .filter-checkbox::before {
   position: absolute;
-  top: -2px;
-  bottom: 0;
+  top: -1px;
   left: 0;
 
   width: 23px;
@@ -411,6 +427,10 @@ input[type="radio"].visually-hidden {
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
+}
+
+.filter-item-left:nth-child(2n) .filter-checkbox::before {
+	left: -2px;
 }
 
 .filter-input-checkbox:checked ~ .filter-checkbox::before {
@@ -454,16 +474,18 @@ input[type="radio"].visually-hidden {
 
 .filter-range-slider {
   position: relative;
+  width: 100%;
 
   padding-top: 9px;
   padding-bottom: 32px;
+
 }
 
 .filter-range {
   height: 2px;
-  margin: 0 auto;
   padding: 0;
   width: 99%;
+  margin-left: auto;
 
   border-radius: 100px;
   background-color: rgba(255,255,255,0.3);;
@@ -480,6 +502,7 @@ input[type="radio"].visually-hidden {
 
 .hotel-sorting {
   display: flex;
+  flex-wrap: wrap;
 
   margin: 0;
   padding: 0 6%;
@@ -498,9 +521,13 @@ input[type="radio"].visually-hidden {
 
   display: inline-block;
 
-  margin-bottom: 7px;
+  margin-bottom: 0px;
 
-  vertical-align: middle;
+  vertical-align: top;
+}
+
+.search-text:nth-child(2) {
+	margin-right: 45px;
 }
 
 .hotel-sorting-list {
@@ -537,7 +564,6 @@ input[type="radio"].visually-hidden {
 
   margin-right: 36px;
   margin-bottom: 6px;
-  margin-left: 46px;
 
   vertical-align: middle;
 }
@@ -639,7 +665,7 @@ input[type="radio"].visually-hidden {
 .hotel-name {
   margin: 0;
   margin-bottom: 3px;
-  margin-left: 1px;
+  margin-left: 0;
   padding: 0;
 
   letter-spacing: 0.1px;
@@ -680,22 +706,39 @@ input[type="radio"].visually-hidden {
   text-align: right;
 }
 
-.star-rating {
-  margin-top: 3px;
+.sorting-order-group {
+	margin-right: 1px;
 }
 
-.star-rating span {
-  margin-bottom: 40px;
-  margin-left: 2px;
+.star-rating {
+  margin-top: 4px;
+}
+
+.star {
+  display: inline-block;
+
+  width: 18px;
+  height: 17px;
+
+  margin-bottom: 47px;
+  
+
+  background-image: url("../img/star-rating.svg");
+
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.star:not(:last-child) {
+	margin-right: 2px;
 }
 
 .hotel-rating .numeric-rating {
   margin: 0;
-  padding: 0;
-  padding-top: 4px;
-  padding-right: 13px;
-  padding-bottom: 4px;
-  padding-left: 15px;
+  padding: 0 12px 1px 15px;
+  margin-right: 1px;
+  min-width: 110px;
+  text-align: center;
 
   background-color: #f2f2f2;
 }
@@ -1140,8 +1183,7 @@ input[type="radio"].visually-hidden {
 .social-button svg,
 .htmlacademy-logo svg,
 .booking-item svg,
-.sorting-order-group svg,
-.star svg {
+.sorting-order-group svg {
   display: block;
 
   height: 100%;
@@ -1251,13 +1293,21 @@ svg path {
   height: 10px;
   margin: 0;
   margin-bottom: 3px;
-  margin-left: 9px;
+  margin-right: 8px;
   padding: 0;
 
   cursor: pointer;
   vertical-align: middle;
 
   border: 0;
+}
+
+.sorting-order:first-child {
+	margin-top: 1px;
+}
+
+.sorting-order:last-child {
+	margin-right: 0;
 }
 
 .sorting-order [class^="filter"] {
@@ -1270,19 +1320,6 @@ svg path {
 }
 
 .sorting-order:active [class^="filter"] {
-  fill: #81b3d2;
-}
-
-.star {
-  display: inline-block;
-
-  width: 18x;
-  height: 17px;
-
-  text-decoration: none;
-}
-
-.star-rating {
   fill: #81b3d2;
 }
 
@@ -1304,6 +1341,7 @@ svg path {
 
 .button-primary {
   padding: 0;
+  padding-bottom: 1px;
   padding-right: 17px;
   padding-left: 16px;
 
@@ -1322,6 +1360,7 @@ svg path {
 
 .button-secondary {
   padding: 0;
+  padding-bottom: 1px;
   padding-right: 17px;
   padding-left: 16px;
 
@@ -1421,13 +1460,7 @@ svg path {
 
 .button-range-from:hover,
 .button-range-from:focus {
-  top: -1px;
-  left: -1px;
-
-  width: 22px;
-  height: 24px;
-
-  background-image: url("../img/filter-button.svg");
+  transform: scale(1.1);
 }
 
 .button-range-to {
@@ -1436,13 +1469,10 @@ svg path {
 
 .button-range-to:hover,
 .button-range-to:focus {
-  top: -1px;
-  left: 79.2%;
-
-  width: 22px;
-  height: 24px;
-
-  background-image: url("../img/filter-button.svg");
+  top: 0;
+  left: 80%;
+  right: 20px;
+	transform: scale(1.1);
 }
 
 .button-default {
@@ -1454,7 +1484,7 @@ svg path {
 
   margin: 0;
   margin-right: 11px;
-  padding: 7px 34px 7px 34px;
+  padding: 8px 34px 8px 34px;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
