@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>HTML Academy: Седона</title>
 </head>
-<body>
+<body class="inner-page">
 	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 		<symbol id="twitter" viewBox="0 0 17 15">
 			<path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
@@ -51,6 +52,12 @@
 		<symbol id="dec" viewBox="0 0 12 12">
 			<line x1="0" y1="6" x2="12" y2="6" stroke-width="3"/>
 		</symbol>
+		<symbol id="filter-down" viewBox="0 0 11 10">
+			<polygon points="5.5,10 0,0 11,0"/>
+		</symbol>
+		<symbol id="filter-up" viewBox="0 0 11 10">
+			<polygon points="5.5,0 0,10 11,10"/>
+		</symbol>
 	</svg>
 	<div class="container">
 		<header class="main-header">
@@ -77,16 +84,16 @@
 								<legend>Инфраструктура:</legend>
 								<ul class="filter-list">
 									<li class="filter-option">
-										<input type="checkbox" name="pool" id="filter-pool" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-pool" tabindex="0">Бассейн</label>
+										<input type="checkbox" name="pool" id="filter-pool" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-pool">Бассейн</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="pool" id="filter-parking" class="filter-input-checkbox" disabled>
-										<label class="filter-checkbox" for="filter-parking" tabindex="0">Парковка</label>
+										<input type="checkbox" name="parking" id="filter-parking" class="filter-input-checkbox visually-hidden" disabled>
+										<label class="filter-checkbox" for="filter-parking">Парковка</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="pool" id="filter-wifi" class="filter-input-checkbox" disabled checked>
-										<label class="filter-checkbox" for="filter-wifi" tabindex="0">Wi-Fi</label>
+										<input type="checkbox" name="wifi" id="filter-wifi" class="filter-input-checkbox visually-hidden" disabled checked>
+										<label class="filter-checkbox" for="filter-wifi">Wi-Fi</label>
 									</li>
 								</ul>
 							</fieldset>
@@ -94,30 +101,32 @@
 								<legend>Тип жилья:</legend>
 								<ul class="filter-list">
 									<li class="filter-option">
-										<input type="checkbox" name="hotel" id="filter-hotel" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-hotel" tabindex="0">Гостиница</label>
+										<input type="checkbox" name="hotel" id="filter-hotel" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-hotel">Гостиница</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="motel" id="filter-motel" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-motel" tabindex="0">Мотель</label>
+										<input type="checkbox" name="motel" id="filter-motel" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-motel">Мотель</label>
 									</li>
 									<li class="filter-option">
-										<input type="checkbox" name="apartments" id="filter-apartments" class="filter-input-checkbox" checked>
-										<label class="filter-checkbox" for="filter-apartments" tabindex="0">Апартаменты</label>
+										<input type="checkbox" name="apartments" id="filter-apartments" class="filter-input-checkbox visually-hidden" checked>
+										<label class="filter-checkbox" for="filter-apartments">Апартаменты</label>
 									</li>
 								</ul>
 							</fieldset>
 						</div>
 						<div class="filter-form-right">
-							<fieldset>
-								<legend>Стоимость в сутки (Р):</legend>
+							<div class="filter-right-wrapper">
+								<span class="price-label">Стоимость в сутки (Р):</span>
 								<div class="filter-item">
 									<div class="filter-output">
 										<div class="filter-output-from">
-											<span>От</span><input type="text" value="0">
+											<label for="filter-min-value">От</label>
+											<input type="text" name="min-value" id="filter-min-value" value="0">
 										</div>
 										<div class="filter-output-to">
-											<span>До</span><input type="text" value="3000">
+											<label for="filter-max-value">До</label>
+											<input type="text" name="max-value" id="filter-max-value" value="3000">
 										</div>
 									</div>
 								</div>
@@ -128,7 +137,7 @@
 									<button type="button" class="button-range button-range-from" aria-label="От"></button>
 									<button type="button" class="button-range button-range-to" aria-label="До"></button>
 								</div>
-							</fieldset>
+							</div>
 							<button type="submit" class="button button-default">Показать</button> 
 						</div>
 					</div>
@@ -181,20 +190,15 @@
 						</div>
 						<div class="hotel-rating">
 							<div class="star-rating">
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
+								<span class="star" aria-label="Звезда"></span>
+								<span class="star" aria-label="Звезда"></span>
+								<span class="star" aria-label="Звезда"></span>
+								<span class="star" aria-label="Звезда"></span>
 							</div>
-							<span class="numeric-rating">Рейтинг: 8,5</span>
+							<div class="numeric-rating">
+								<span>Рейтинг:</span>
+								<span>8,5</span>
+							</div>
 						</div>
 					</li>
 					<li class="hotel-item">
@@ -218,17 +222,14 @@
 						</div>
 						<div class="hotel-rating">
 							<div class="star-rating">
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
+								<span class="star" aria-label="Звезда"></span>
+								<span class="star" aria-label="Звезда"></span>
+								<span class="star" aria-label="Звезда"></span>
 							</div>
-							<span class="numeric-rating">Рейтинг: 8,9</span>
+							<div class="numeric-rating">
+								<span>Рейтинг:</span>
+								<span>8,9</span>
+							</div>
 						</div>
 					</li>
 					<li class="hotel-item">
@@ -252,49 +253,49 @@
 						</div>
 						<div class="hotel-rating">
 							<div class="star-rating">
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
-								<span class="star" aria-label="Звезда"><svg aria-hidden="true" width="18" height="17">
-									<use xlink:href="#star-rating" class="star-rating"/>
-								</svg></span>
+								<span class="star" aria-label="Звезда"></span>
+								<span class="star" aria-label="Звезда"></span>
 							</div>
-							<span class="numeric-rating">Рейтинг: 9,2</span>
+							<div class="numeric-rating">
+								<span>Рейтинг:</span>
+								<span>9,2</span>
+							</div>
 						</div>
 					</li>
 				</ul>
 			</section>
 		</main>
 		<footer class="main-footer">
-			<div class="footer-wrap footer-wrap-catalog">
-				<p class="footer-contacts">
-					#visitsedona
-				</p>
-				<div class="footer-social">
-					<ul>
-						<li>
-							<a href="#" class="social-button social-button-twitter" aria-label="Twitter">
-								<svg aria-hidden="true" width="17" height="15">
-									<use xlink:href="#twitter" class="twitter-1"/>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="social-button social-button-facebook" aria-label="Facebook">
-								<svg aria-hidden="true" width="12" height="22">
-									<use xlink:href="#facebook" class="facebook-1"/>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="social-button social-button-youtube" aria-label="Youtube">
-								<svg aria-hidden="true" width="20" height="16">
-									<use xlink:href="#youtube" class="youtube-1"/>
-								</svg>
-							</a>
-						</li>
-					</ul>
+			<div class="footer-wrap">
+				<div class="footer-contacts">
+					<p>#visitsedona</p>
 				</div>
+				<ul class="footer-social">
+					<li>
+						<a href="#" class="social-button social-button-twitter" aria-label="Twitter">
+							<span class="visually-hidden">Twitter</span>
+							<svg aria-hidden="true" width="17" height="15">
+								<use xlink:href="#twitter" class="twitter-1"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="social-button social-button-facebook" aria-label="Facebook">
+							<span class="visually-hidden">Facebook</span>
+							<svg aria-hidden="true" width="12" height="22">
+								<use xlink:href="#facebook" class="facebook-1"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="social-button social-button-youtube" aria-label="Youtube">
+							<span class="visually-hidden">Youtube</span>
+							<svg aria-hidden="true" width="20" height="16">
+								<use xlink:href="#youtube" class="youtube-1"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
 				<p class="footer-copyright">
 					<span>Website by</span>
 					<a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="HTMLAcademy">
@@ -306,5 +307,6 @@
 			</div>
 		</footer>
 	</div>
+	<script src="js/toggle-button.js"></script>
 </body>
 </html>

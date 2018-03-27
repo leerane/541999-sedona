@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>HTML Academy: Седона</title>
 </head>
@@ -51,6 +52,12 @@
 		<symbol id="dec" viewBox="0 0 12 12">
 			<line x1="0" y1="6" x2="12" y2="6" stroke-width="3"/>
 		</symbol>
+		<symbol id="filter-down" viewBox="0 0 11 10">
+			<polygon points="5.5,10 0,0 11,0"/>
+		</symbol>
+		<symbol id="filter-up" viewBox="0 0 11 10">
+			<polygon points="5.5,0 0,10 11,10"/>
+		</symbol>
 	</svg>
 	<div class="container">
 		<header class="main-header">
@@ -83,7 +90,7 @@
 					<div class="features-text">
 						<h3>Настоящий<br>городок</h3>
 						<span class="features-number">№1</span>
-						<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+						<p>Седона — не аттракцион для туристов, там течет своя жизнь </p>
 					</div>
 				</div>
 				<ul class="advices-list">
@@ -102,7 +109,7 @@
 				</ul>
 				<div class="features-item features-item-right">
 					<div class="features-img"></div>
-					<div class="features-text">
+					<div class="features-text features-text-right">
 						<h3>Там есть<br>мост дьявола</h3>
 						<span class="features-number">№2</span>
 						<p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
@@ -126,94 +133,109 @@
 					</li>
 				</ul>
 			</section>
-			<div class="message-attraction">
-				<h2 class="attraction">Заинтересовались?</h2>
-				<p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-				<a href="catalog.html" target="_blank" class="button button-secondary button-large">Поиск гостиницы в Седоне</a> 
-				<div class="modal-search">
-					<form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-						<div class="booking-item">
-							<label for="booking-arrival-date">Дата заезда:</label><input type="text" name="arrival-date" id="booking-arrival-date" class="booking-input" value="24 апреля 2017"><button type="button" class="button-form button-form-arrival-calendar" aria-label="Дата заезда"><svg aria-hidden="true" width="21" height="22">
+			<section class="booking-section">
+				<div class="message-attraction">
+					<h2 class="attraction">Заинтересовались?</h2>
+					<p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+					<a href="catalog.html" id="modal-button" target="_blank" class="button button-secondary button-large">
+						Поиск гостиницы в Седоне
+					</a> 
+					<div class="modal-search">
+						<form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+							<div class="booking-item">
+								<label for="booking-arrival-date">Дата заезда:</label>
+								<div class="booking-input-wrap">
+									<input type="text" name="arrival-date" id="booking-arrival-date" class="booking-input" placeholder="24 апреля 2017">
+									<button type="button" class="button-form button-form-arrival-calendar" aria-label="Дата заезда">
+										<svg aria-hidden="true" width="21" height="22">
+											<use xlink:href="#calendar" class="calendar-1"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="booking-item">
+								<label for="booking-arrival-date">Дата выезда:</label>
+								<div class="booking-input-wrap">
+									<input type="text" name="departure-date" id="booking-departure-date" class="booking-input" placeholder="4 июля 2017"><button type="button" class="button-form button-form-departure-calendar" aria-label="Дата выезда"><svg aria-hidden="true" width="21" height="22">
 										<use xlink:href="#calendar" class="calendar-1"/>
-									</svg></button>
-						</div>
-						<div class="booking-item">
-							<label for="booking-arrival-date">Дата выезда:</label><input type="text" name="departure-date" id="booking-departure-date" class="booking-input" value="4 июля 2017"><button type="button" class="button-form button-form-departure-calendar" aria-label="Дата выезда"><svg aria-hidden="true" width="21" height="22">
-										<use xlink:href="#calendar" class="calendar-1"/>
-									</svg></button>
-						</div>
-						<div class="booking-group-amount">
-							<div class="booking-item booking-item-small">
-								<label for="booking-adults-amount">Взрослые:</label>
-								<div class="booking-count-group">
-									<button type="button" class="button-form button-form-adults-dec" aria-label="Уменьшить"><svg aria-hidden="true" width="12" height="12">
-										<use xlink:href="#dec" class="dec-1"/>
-									</svg></button><input type="text" name="adults-amount" id="booking-adults-amount" class="booking-input booking-input-count" value="2"><button type="button" class="button-form button-form-adults-inc" aria-label="Увеличить"><svg aria-hidden="true" width="11" height="11">
-										<use xlink:href="#inc" class="inc-1"/>
 									</svg></button>
 								</div>
 							</div>
-							<div class="booking-item booking-item-small">
-								<label for="booking-children-amount">Дети:</label>
-								<div class="booking-count-group">
-									<button type="button" class="button-form button-form-children-dec" aria-label="Уменьшить"><svg aria-hidden="true" width="12" height="12">
-										<use xlink:href="#dec" class="dec-1"/>
-									</svg></button><input type="text" name="children-amount" id="booking-children-amount" class="booking-input booking-input-count" value="0"><button type="button" class="button-form button-form-children-inc" aria-label="Увеличить"><svg aria-hidden="true" width="11" height="11">
-										<use xlink:href="#inc" class="inc-1"/>
-									</svg></button>
+							<div class="booking-group-amount">
+								<div class="booking-item booking-item-small">
+									<label for="booking-adults-amount">Взрослые:</label>
+									<div class="booking-count-group">
+										<button type="button" class="button-form button-form-adults-dec" aria-label="Уменьшить"><svg aria-hidden="true" width="11" height="12">
+											<use xlink:href="#dec" class="dec-1"/>
+										</svg></button><input type="text" name="adults-amount" id="booking-adults-amount" class="booking-input booking-input-count" value="2"><button type="button" class="button-form button-form-adults-inc" aria-label="Увеличить"><svg aria-hidden="true" width="11" height="11">
+											<use xlink:href="#inc" class="inc-1"/>
+										</svg></button>
+									</div>
+								</div>
+								<div class="booking-item booking-item-small">
+									<label for="booking-children-amount">Дети:</label>
+									<div class="booking-count-group">
+										<button type="button" class="button-form button-form-children-dec" aria-label="Уменьшить"><svg aria-hidden="true" width="11" height="12">
+											<use xlink:href="#dec" class="dec-1"/>
+										</svg></button><input type="text" name="children-amount" id="booking-children-amount" class="booking-input booking-input-count" value="0"><button type="button" class="button-form button-form-children-inc" aria-label="Увеличить"><svg aria-hidden="true" width="11" height="11">
+											<use xlink:href="#inc" class="inc-1"/>
+										</svg></button>
+									</div>
 								</div>
 							</div>
-						</div>
-						<button type="submit" class="button button-primary button-modal-search">Найти</button> 
-					</form>
+							<button type="submit" class="button button-primary button-modal-search">Найти</button> 
+						</form>
+					</div>
 				</div>
-			</div>
+				<div class="sedona-map">
+					<iframe tabindex="-1" class="sedona-map-frame"
+					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDq49LAadFL5mh-lWSk3s0V8-44Y9GYd7c&q=Sedona&zoom=9&center=34.869627,-111.761154&maptype=roadmap" allowfullscreen>
+				  </iframe>
+			  </div>
+			</section>
 		</main>
 		<footer class="main-footer">
-			<div class="sedona-map">
-				<iframe tabindex="-1" class="sedona-map-frame"
-				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDq49LAadFL5mh-lWSk3s0V8-44Y9GYd7c&q=Sedona&zoom=9&center=34.869627,-111.761154&maptype=roadmap" allowfullscreen>
-				</iframe>
-				<div class="footer-wrap">
-					<p class="footer-contacts">
-						#visitsedona
-					</p>
-					<div class="footer-social">
-						<ul>
-							<li>
-								<a href="#" class="social-button social-button-twitter" aria-label="Twitter">
-									<svg aria-hidden="true" width="17" height="15">
-										<use xlink:href="#twitter" class="twitter-1"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="social-button social-button-facebook" aria-label="Facebook">
-									<svg aria-hidden="true" width="12" height="22">
-										<use xlink:href="#facebook" class="facebook-1"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="social-button social-button-youtube" aria-label="Youtube">
-									<svg aria-hidden="true" width="20" height="16">
-										<use xlink:href="#youtube" class="youtube-1"/>
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<p class="footer-copyright">
-						<span>Website by</span>
-						<a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="HTMLAcademy">
-							<svg aria-hidden="true" width="115" height="41">
-								<use xlink:href="#htmlacademy" class="htmlacademy"/>
+			<div class="footer-wrap">
+				<div class="footer-contacts">
+					<p>#visitsedona</p>
+				</div>
+				<ul class="footer-social">
+					<li>
+						<a href="#" class="social-button social-button-twitter" aria-label="Twitter">
+							<span class="visually-hidden">Twitter</span>
+							<svg aria-hidden="true" width="17" height="15">
+								<use xlink:href="#twitter" class="twitter-1"/>
 							</svg>
 						</a>
-					</p>
-				</div>
+					</li>
+					<li>
+						<a href="#" class="social-button social-button-facebook" aria-label="Facebook">
+							<span class="visually-hidden">Facebook</span>
+							<svg aria-hidden="true" width="12" height="22">
+								<use xlink:href="#facebook" class="facebook-1"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="social-button social-button-youtube" aria-label="Youtube">
+							<span class="visually-hidden">Youtube</span>
+							<svg aria-hidden="true" width="20" height="16">
+								<use xlink:href="#youtube" class="youtube-1"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<p class="footer-copyright">
+					<span>Website by</span>
+					<a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="HTMLAcademy">
+						<svg aria-hidden="true" width="115" height="41">
+							<use xlink:href="#htmlacademy" class="htmlacademy"/>
+						</svg>
+					</a>
+				</p>
 			</div>
 		</footer>
 	</div>
+	<script src="js/toggle-button.js"></script>
 </body>
 </html>
