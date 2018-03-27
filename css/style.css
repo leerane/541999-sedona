@@ -22,7 +22,7 @@ body {
   text-transform: uppercase;
 
   color: #000000;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 img {
@@ -97,6 +97,7 @@ input[type="radio"].visually-hidden {
   max-width: 1200px;
   margin: 0 auto;
 
+  background-color: #ffffff;
   -webkit-box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
           box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
@@ -305,7 +306,7 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display: flex;
   flex-basis: 33%;
-  flex-direction: column;
+      flex-direction: column;
   justify-content: center;
   align-items: center;
 
