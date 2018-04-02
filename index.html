@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.min.css">
 	<title>HTML Academy: Седона</title>
 </head>
 <body>
@@ -50,6 +51,12 @@
 		</symbol>
 		<symbol id="dec" viewBox="0 0 12 12">
 			<line x1="0" y1="6" x2="12" y2="6" stroke-width="3"/>
+		</symbol>
+		<symbol id="filter-down" viewBox="0 0 11 10">
+			<polygon points="5.5,10 0,0 11,0"/>
+		</symbol>
+		<symbol id="filter-up" viewBox="0 0 11 10">
+			<polygon points="5.5,0 0,10 11,10"/>
 		</symbol>
 	</svg>
 	<div class="container">
@@ -181,9 +188,6 @@
 					</div>
 				</div>
 				<div class="sedona-map">
-					<iframe tabindex="-1" class="sedona-map-frame"
-					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDq49LAadFL5mh-lWSk3s0V8-44Y9GYd7c&q=Sedona&zoom=9&center=34.869627,-111.761154&maptype=roadmap" allowfullscreen>
-				  </iframe>
 			  </div>
 			</section>
 		</main>
@@ -229,6 +233,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/toggle-button.js"></script>
+	<script async src="js/main-script.min.js" ></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7OCVZ0PcO0JdmPxOVf7XAbFq7_FDivbU&callback=initMap"></script>
 </body>
 </html>
