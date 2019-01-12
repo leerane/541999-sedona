@@ -1137,12 +1137,16 @@ input[type="radio"].visually-hidden {
 
 .message-attraction {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 
   margin: 0 auto;
   padding-top: 50px;
 
   text-align: center;
+}
+
+.message-attraction-opened {
+  z-index: 3;
 }
 
 .message-attraction .attraction {
@@ -1176,6 +1180,8 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: 50% -154px;
   background-size: auto;
+
+  z-index: 2;
 }
 
 .main-footer {
@@ -1186,6 +1192,8 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: auto;
   margin-top: -120px;
+
+  z-index: 3;
 }
 
 .inner-page .main-footer {
@@ -1569,7 +1577,8 @@ svg path {
   z-index: -1;
 
   display: block;
-  visibility: visible;
+  visibility: hidden;
+  opacity: 0;
 
   width: 568px;
   margin: 0;
@@ -1578,20 +1587,16 @@ svg path {
   font-size: 14px;
   line-height: 26px;
 
-  opacity: 1;
   color: #000000;
   background-color: #ffffff;
   -webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
           box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
-  -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
-       -o-transition: opacity 0.25s ease, transform 0.25s ease;
-          transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
-          transition: opacity 0.25s ease, transform 0.25s ease;
-          transition: opacity 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, -80px);
+      -ms-transform: translate(-50%, -80px);
+          transform: translate(-50%, -80px);
+
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
 .modal-search input[type="text"]::-webkit-input-placeholder {
@@ -1611,18 +1616,12 @@ svg path {
 }
 
 .modal-shown {
-  visibility: hidden;
+  visibility: visible;
+  opacity: 1;
 
-  opacity: 0;
-
-  -webkit-transition: opacity 0.25s ease, visibility 0.25s ease, -webkit-transform 0.25s ease;
-       -o-transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
-          transition: opacity 0.25s ease, visibility 0.25s ease, -webkit-transform 0.25s ease;
-          transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
-          transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
-  -webkit-transform: translate(-50%, -80px);
-      -ms-transform: translate(-50%, -80px);
-          transform: translate(-50%, -80px);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .modal-error {

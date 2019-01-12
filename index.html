@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
 	<title>HTML Academy: Седона</title>
 </head>
 <body>
@@ -139,7 +140,7 @@
 					<p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
 					<a href="catalog.html" id="modal-button" target="_blank" class="button button-secondary button-large">
 						Поиск гостиницы в Седоне
-					</a> 
+					</a>
 					<div class="modal-search">
 						<form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
 							<div class="booking-item">
@@ -183,7 +184,7 @@
 									</div>
 								</div>
 							</div>
-							<button type="submit" class="button button-primary button-modal-search">Найти</button> 
+							<button type="submit" class="button button-primary button-modal-search">Найти</button>
 						</form>
 					</div>
 				</div>
@@ -233,7 +234,9 @@
 			</div>
 		</footer>
 	</div>
-	<script async src="js/main-script.min.js" ></script>
+  <script async src="js/map.js"></script>
+  <script async src="js/reveal.js"></script>
+	<script async src="js/form.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7OCVZ0PcO0JdmPxOVf7XAbFq7_FDivbU&callback=initMap"></script>
 </body>
 </html>
